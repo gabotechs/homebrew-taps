@@ -5,20 +5,20 @@
 class DepTree < Formula
   desc ""
   homepage "https://github.com/gabotechs/dep-tree"
-  version "0.8.3"
+  version "0.8.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/gabotechs/dep-tree/releases/download/v0.8.3/dep-tree_0.8.3_Darwin_x86_64.tar.gz"
-      sha256 "ed2268be853dd9af0c643419d7aef64e3bc85e7e2f9850fa875bb94f2ba6b10c"
+      url "https://github.com/gabotechs/dep-tree/releases/download/v0.8.4/dep-tree_0.8.4_Darwin_x86_64.tar.gz"
+      sha256 "f8de1b303e68a41f825703732b2ee99a320230e70a073da6871a6ada334d26a3"
 
       def install
         bin.install "dep-tree"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/gabotechs/dep-tree/releases/download/v0.8.3/dep-tree_0.8.3_Darwin_arm64.tar.gz"
-      sha256 "97c2bef75544ff10fbf70126a1d1bf5fe58593d54acb8897425d2ffbe1ea4ff8"
+      url "https://github.com/gabotechs/dep-tree/releases/download/v0.8.4/dep-tree_0.8.4_Darwin_arm64.tar.gz"
+      sha256 "e5289530263474ac0a2d64246a65daca7af77ed1b4d822b400d602578e0e3b50"
 
       def install
         bin.install "dep-tree"
@@ -28,16 +28,16 @@ class DepTree < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gabotechs/dep-tree/releases/download/v0.8.3/dep-tree_0.8.3_Linux_arm64.tar.gz"
-      sha256 "6f6479c12dbe545c0aa7f3ee55d37142b34afba4bf06a7491661d104e597ffcf"
+      url "https://github.com/gabotechs/dep-tree/releases/download/v0.8.4/dep-tree_0.8.4_Linux_arm64.tar.gz"
+      sha256 "5715278c2ab40002732377689799e59246a1d22b539e399461a5d9c5b7bf5e82"
 
       def install
         bin.install "dep-tree"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gabotechs/dep-tree/releases/download/v0.8.3/dep-tree_0.8.3_Linux_x86_64.tar.gz"
-      sha256 "04215d595dd46389174581a42220cce029bf0fa6125b1b6a645c159d0c3e3046"
+      url "https://github.com/gabotechs/dep-tree/releases/download/v0.8.4/dep-tree_0.8.4_Linux_x86_64.tar.gz"
+      sha256 "6cc137ffbee64cbdd3eb13b25862638c0ef23556909c09088bbe85efee3eef95"
 
       def install
         bin.install "dep-tree"
