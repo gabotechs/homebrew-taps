@@ -5,20 +5,20 @@
 class DepTree < Formula
   desc ""
   homepage "https://github.com/gabotechs/dep-tree"
-  version "0.15.1"
+  version "0.15.2"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/gabotechs/dep-tree/releases/download/v0.15.1/dep-tree_0.15.1_darwin_amd64.tar.gz"
-      sha256 "0a2da4d4a37106dbd227d11e0399e1c740531c756cf071f7d2e87d532a8941c4"
+    if Hardware::CPU.arm?
+      url "https://github.com/gabotechs/dep-tree/releases/download/v0.15.2/dep-tree_0.15.2_darwin_arm64.tar.gz"
+      sha256 "56ef606a7bb1ec8ca2b80b27d005fb51cdaf8213d741dceb8f41037937896710"
 
       def install
         bin.install "dep-tree"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/gabotechs/dep-tree/releases/download/v0.15.1/dep-tree_0.15.1_darwin_arm64.tar.gz"
-      sha256 "46de57bb1396656e8825ebaeb2ecf78fb242c59fe4afc7df87fbb64b35abfac5"
+    if Hardware::CPU.intel?
+      url "https://github.com/gabotechs/dep-tree/releases/download/v0.15.2/dep-tree_0.15.2_darwin_amd64.tar.gz"
+      sha256 "73148d1a508915e297f5c25ce9631fe5f075c3c126c2c97f9c8433cd77a22b25"
 
       def install
         bin.install "dep-tree"
@@ -27,17 +27,17 @@ class DepTree < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gabotechs/dep-tree/releases/download/v0.15.1/dep-tree_0.15.1_linux_arm64.tar.gz"
-      sha256 "246845021d3d9d73552f20f7f75ef62abd80d7afe8b83ec9c41f27bec72d734d"
+    if Hardware::CPU.intel?
+      url "https://github.com/gabotechs/dep-tree/releases/download/v0.15.2/dep-tree_0.15.2_linux_amd64.tar.gz"
+      sha256 "834f820ae480e796ff98aa6334ac9f159118aff8f31b24954f682b85d4834a7d"
 
       def install
         bin.install "dep-tree"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/gabotechs/dep-tree/releases/download/v0.15.1/dep-tree_0.15.1_linux_amd64.tar.gz"
-      sha256 "08fadc429ad7b8f94158a4a7dd67fe19a02a94be557857c0ed31a5fd59d5a380"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/gabotechs/dep-tree/releases/download/v0.15.2/dep-tree_0.15.2_linux_arm64.tar.gz"
+      sha256 "4b240be188f72604f52b07342658ce8b96c317f2ceab0978566e3f35349b0772"
 
       def install
         bin.install "dep-tree"
