@@ -1,18 +1,18 @@
-class MusicGPT < Formula
+class Musicgpt < Formula
   desc ""
   homepage "https://github.com/gabotechs/MusicGPT"
-  version "0.1.12"
+  version "0.1.13"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/gabotechs/MusicGPT/releases/download/v0.1.12/musicgpt-aarch64-apple-darwin.tar.gz"
+      url "https://github.com/gabotechs/MusicGPT/releases/download/v0.1.13/musicgpt-aarch64-apple-darwin.tar.gz"
 
       def install
         bin.install "musicgpt"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gabotechs/MusicGPT/releases/download/v0.1.12/musicgpt-x86_64-apple-darwin.tar.gz"
+      url "https://github.com/gabotechs/MusicGPT/releases/download/v0.1.13/musicgpt-x86_64-apple-darwin.tar.gz"
 
       def install
         bin.install "musicgpt"
@@ -22,14 +22,14 @@ class MusicGPT < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/gabotechs/MusicGPT/releases/download/v0.1.12/musicgpt-x86_64-unknown-linux-gnu.tar.gz"
+      url "https://github.com/gabotechs/MusicGPT/releases/download/v0.1.13/musicgpt-x86_64-unknown-linux-gnu.tar.gz"
 
       def install
         bin.install "musicgpt"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gabotechs/MusicGPT/releases/download/v0.1.12/musicgpt-aarch64-unknown-linux-gnu.tar.gz"
+      url "https://github.com/gabotechs/MusicGPT/releases/download/v0.1.13/musicgpt-aarch64-unknown-linux-gnu.tar.gz"
 
       def install
         bin.install "musicgpt"
