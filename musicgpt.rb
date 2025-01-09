@@ -1,18 +1,18 @@
 class Musicgpt < Formula
   desc ""
   homepage "https://github.com/gabotechs/MusicGPT"
-  version "0.3.19"
+  version "0.3.20"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/gabotechs/MusicGPT/releases/download/v0.3.19/musicgpt-aarch64-apple-darwin"
+      url "https://github.com/gabotechs/MusicGPT/releases/download/v0.3.20/musicgpt-aarch64-apple-darwin"
 
       def install
         bin.install "musicgpt-aarch64-apple-darwin" => "musicgpt"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gabotechs/MusicGPT/releases/download/v0.3.19/musicgpt-x86_64-apple-darwin"
+      url "https://github.com/gabotechs/MusicGPT/releases/download/v0.3.20/musicgpt-x86_64-apple-darwin"
 
       def install
         bin.install "musicgpt-x86_64-apple-darwin" => "musicgpt"
@@ -22,7 +22,7 @@ class Musicgpt < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/gabotechs/MusicGPT/releases/download/v0.3.19/musicgpt-x86_64-unknown-linux-gnu"
+      url "https://github.com/gabotechs/MusicGPT/releases/download/v0.3.20/musicgpt-x86_64-unknown-linux-gnu"
 
       def install
         bin.install "musicgpt-x86_64-unknown-linux-gnu" => "musicgpt"
@@ -30,7 +30,7 @@ class Musicgpt < Formula
     end
     # TODO: Linux ARM still does not work.
     # if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    #   url "https://github.com/gabotechs/MusicGPT/releases/download/v0.3.19/musicgpt-aarch64-unknown-linux-gnu"
+    #   url "https://github.com/gabotechs/MusicGPT/releases/download/v0.3.20/musicgpt-aarch64-unknown-linux-gnu"
     #
     #   def install
     #     bin.install "musicgpt-aarch64-unknown-linux-gnu" => "musicgpt"
