@@ -1,41 +1,40 @@
 class Musicgpt < Formula
   desc ""
   homepage "https://github.com/gabotechs/MusicGPT"
-  version "0.3.15"
+  version "0.3.16"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/gabotechs/MusicGPT/releases/download/v0.3.15/aarch64-apple-darwin.tar.gz"
+      url "https://github.com/gabotechs/MusicGPT/releases/download/v0.3.16/musicgpt-aarch64-apple-darwin"
 
       def install
-        bin.install "musicgpt"
+        bin.install "musicgpt-aarch64-apple-darwin" => "musicgpt"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gabotechs/MusicGPT/releases/download/v0.3.15/x86_64-apple-darwin.tar.gz"
+      url "https://github.com/gabotechs/MusicGPT/releases/download/v0.3.16/musicgpt-x86_64-apple-darwin"
 
       def install
-        bin.install "musicgpt"
+        bin.install "musicgpt-x86_64-apple-darwin" => "musicgpt"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/gabotechs/MusicGPT/releases/download/v0.3.15/x86_64-unknown-linux-gnu.tar.gz"
+      url "https://github.com/gabotechs/MusicGPT/releases/download/v0.3.16/musicgpt-x86_64-unknown-linux-gnu"
 
       def install
-        bin.install "musicgpt"
-        lib.install Dir["lib/*"]
+        bin.install "musicgpt-x86_64-unknown-linux-gnu" => "musicgpt"
       end
     end
-# TODO: Linux ARM still does not work.
-#     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-#       url "https://github.com/gabotechs/MusicGPT/releases/download/v0.3.15/musicgpt-aarch64-unknown-linux-gnu.tar.gz"
-#
-#       def install
-#         bin.install "musicgpt"
-#       end
-#     end
+    # TODO: Linux ARM still does not work.
+    # if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+    #   url "https://github.com/gabotechs/MusicGPT/releases/download/v0.3.16/musicgpt-aarch64-unknown-linux-gnu"
+    #
+    #   def install
+    #     bin.install "musicgpt-aarch64-unknown-linux-gnu" => "musicgpt"
+    #   end
+    # end
   end
 end
