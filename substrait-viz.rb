@@ -5,20 +5,20 @@
 class SubstraitViz < Formula
   desc ""
   homepage "https://github.com/gabotechs/substrait-viz"
-  version "0.0.5"
+  version "0.0.6"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/gabotechs/substrait-viz/releases/download/v0.0.5/substrait-viz_Darwin_x86_64.tar.gz"
-      sha256 "93bd44cbcbc1acfe0ace43fcf0ceb47e718d587da51ccf69a95533e9d499c99c"
+      url "https://github.com/gabotechs/substrait-viz/releases/download/v0.0.6/substrait-viz_Darwin_x86_64.tar.gz"
+      sha256 "520bb7c6af43e9e6541fbd73d20670405529f251e3f817d01280a17f2ec4ba60"
 
       def install
         bin.install "substrait-viz"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/gabotechs/substrait-viz/releases/download/v0.0.5/substrait-viz_Darwin_arm64.tar.gz"
-      sha256 "b8646defdabc93bc35e5aa3427307c6a6a7a5fdb5a916ccbb37c1d1f81cc9656"
+      url "https://github.com/gabotechs/substrait-viz/releases/download/v0.0.6/substrait-viz_Darwin_arm64.tar.gz"
+      sha256 "191852a248736f83577babbaa95c826503b238812af90768643313315407c844"
 
       def install
         bin.install "substrait-viz"
@@ -29,8 +29,8 @@ class SubstraitViz < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/gabotechs/substrait-viz/releases/download/v0.0.5/substrait-viz_Linux_x86_64.tar.gz"
-        sha256 "813a95c0b3216b25723782d5a45d5265b7a9fafd04a6891738db9e457a97cc95"
+        url "https://github.com/gabotechs/substrait-viz/releases/download/v0.0.6/substrait-viz_Linux_x86_64.tar.gz"
+        sha256 "e3fdc888435fb458cdf6ba02abc0e988080332088e08c4f1180bf23509f15281"
 
         def install
           bin.install "substrait-viz"
@@ -39,8 +39,8 @@ class SubstraitViz < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/gabotechs/substrait-viz/releases/download/v0.0.5/substrait-viz_Linux_arm64.tar.gz"
-        sha256 "4729d345a3d070bb24ac345b8fd8f4f42a2ac3c4e755e000c1f20295cdf128d5"
+        url "https://github.com/gabotechs/substrait-viz/releases/download/v0.0.6/substrait-viz_Linux_arm64.tar.gz"
+        sha256 "ce26afa18ff86ac761bc0a780a58db7b3cd2e44c4cbe8a53c2475bb1aa1fe321"
 
         def install
           bin.install "substrait-viz"
